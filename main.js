@@ -1,3 +1,6 @@
+import modelURL from "/models/flower-model/model.json?url";
+import metadataURL from "/models/flower-model/metadata.json?url";
+
 const initButton = document.querySelector("#init-button");
 const jjpText = document.querySelector("#jjp-text");
 const jjpPercentage = document.querySelector("#jjp-percentage");
@@ -15,8 +18,6 @@ initButton.addEventListener("click", () => {
   init();
 });
 
-const URL = "./src/models/flower-model/";
-
 let model, webcam, labelContainer, maxPredictions;
 
 // Load the image model and setup the webcam
@@ -25,8 +26,8 @@ async function init() {
     return;
   }
 
-  const modelURL = URL + "model.json";
-  const metadataURL = URL + "metadata.json";
+  // const modelURL = URL + "model.json";
+  // const metadataURL = URL + "metadata.json";
 
   // load the model and metadata
   // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
